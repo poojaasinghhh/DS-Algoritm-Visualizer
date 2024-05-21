@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Complexity</title>
+    <link rel="stylesheet" href="time_complexity.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Understanding Time Complexity</h1>
+    </header>
+    <main>
+      <section class="content">
+        <img
+          src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*5ZLci3SuR0zM_QlZOADv8Q.jpeg"
+          alt="Time Complexity"
+          class="topic-image"
+        />
+        <div class="explanation">
+          <h2>Introduction to Time Complexity</h2>
+          <p>
+            Time complexity is a computational concept that helps us understand
+            the amount of time an algorithm takes to run as a function of the
+            length of the input. It allows us to analyze and compare the
+            efficiency of different algorithms.
+          </p>
+
+          <h2>Big O Notation</h2>
+          <p>
+            Big O notation is used to describe the upper bound of the time
+            complexity. It gives the worst-case scenario of how an algorithm
+            performs as the input size grows. For example:
+          </p>
+          <pre><code>function example(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+}
+// Time Complexity: O(n)</code></pre>
+
+          <h2>Big Ω Notation</h2>
+          <p>
+            Big Omega (Ω) notation is used to describe the lower bound of the
+            time complexity. It gives the best-case scenario. For example:
+          </p>
+          <pre><code>function example(arr) {
+    return Math.max(...arr);
+}
+// Time Complexity: Ω(1)</code></pre>
+
+          <h2>Big Θ Notation</h2>
+          <p>
+            Big Theta (Θ) notation provides a tight bound on the time
+            complexity. It gives both the best and worst-case scenarios. For
+            example:
+          </p>
+          <pre><code>function sum(arr) {
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
+        total += arr[i];
+    }
+    return total;
+}
+// Time Complexity: Θ(n)</code></pre>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

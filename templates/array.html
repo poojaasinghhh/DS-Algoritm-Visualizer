@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array</title>
+    <style>
+        html, * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #111; /* Dark background color */
+            color: #eee; /* Light text color */
+            font-family: Arial, sans-serif; /* Change font */
+        }
+
+        .grid {
+            max-width: 600px;
+            position: relative;
+            padding: 10px;
+            margin: 50px auto;
+            outline: 2px solid green;
+        }
+
+        .heading {
+            padding: 20px;
+            text-align: center;
+            font-family: ubuntu;
+            font-weight: bolder;
+            font-size: 20px;
+            color: #ff0; /* Yellow heading color */
+        }
+
+        .algo {
+            display: block;
+            padding: 10px;
+            background: #333; /* Dark background color for algorithm boxes */
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* White box shadow */
+        }
+
+        .algo__link {
+            text-decoration: none;
+            color: #9f7; /* Lighter text color for links */
+            font-size: 20px;
+            font-weight: bolder;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* White text shadow */
+        }
+
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<p class='heading'>Array</p>
+<div class='grid'></div>
+
+</div>
+
+<div class="circular__read">
+
+</div>
+<script>
+    // Main
+    let grid = document.querySelector('.grid');
+    let algo = [
+        {
+            name: 'Array ADT',
+            link: `array/array_adt.html`
+        },
+        {
+            name: 'Linear Search',
+            link: `array/linear.html`
+        },
+        {
+            name: 'Kadane\'s Algorithm',
+            link: `array/kadane.html`
+        },
+        {
+            name: 'Prefix Sum',
+            link: `array/prefix_sum.html`
+        },
+        {
+            name: 'Sliding Windows',
+            link: `array/sliding_windows.html`
+        },
+        {
+            name: "Array Partitioning",
+            link: "array/partition.html"
+        },
+        {
+            name: "Rain Water Trapping",
+            link: "array/rain_water.html"
+        }
+    ]
+    init();
+
+    // Utility function
+
+    function init() {
+        algo.forEach((e, i) => {
+            let html = `
+                        <a href="${e.link}" class="algo__link">${e.name}</a>
+                `
+            let algo = document.createElement('div');
+            algo.classList.add('algo');
+            algo.innerHTML = html;
+            grid.appendChild(algo);
+        })
+    }
+</script>
+</body>
+</html>
